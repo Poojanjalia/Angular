@@ -1,0 +1,28 @@
+
+<kendo-button [look]="'default'">Default Button</kendo-button>
+<kendo-button [look]="'outline'">Outline Button</kendo-button>
+<kendo-button [disabled]="true">Button</kendo-button>
+<br><br>
+<kendo-button [primary]="true">Primary Action</kendo-button>
+<kendo-button [togglable]="true">toggle Action</kendo-button> 
+<kendo-button [svgIcon]="Cart">Cart</kendo-button>
+<kendo-button [svgIcon]="Calendar">calendar</kendo-button>
+<br><br>
+<button kendoButton  themeColor="primary" [toggleable]="true">Petrol</button>
+<button kendoButton  [toggleable]="true">Diesel</button>
+<br><br>
+<kendo-buttongroup selection="single">
+<kendo-button [togglable]="true" [svgIcon]="alignLeftIcon"></kendo-button>
+<kendo-button [togglable]="true" [svgIcon]="alignRightIcon"></kendo-button>
+<kendo-button [togglable]="true" [svgIcon]="alignCenterIcon"></kendo-button>
+<kendo-button [togglable]="true" [svgIcon]="alignJustifyIcon"></kendo-button>
+</kendo-buttongroup>
+<br><br>
+<kendo-buttongroup selection="multiple">
+<kendo-button [toggleable]="true" [svgIcon]="boldIcon" title="Bold"></kendo-button>
+<kendo-button [toggleable]="true" [svgIcon]="italicIcon" title="Italic"></kendo-button>
+<kendo-button [toggleable]="true" [svgIcon]="underlineIcon" title="Underline"></kendo-button>
+</kendo-buttongroup>
+<br><br>
+
+ <!-- <kendo-button [routerLink]="['/download']">Click</kendo-button>  -->

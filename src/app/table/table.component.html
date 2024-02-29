@@ -1,0 +1,30 @@
+<h1>Grid</h1>
+
+    <legend>Selection setting</legend>
+    <div class="k-form-field">
+        <span>Mode</span>
+        <input type="radio" id="single" value="single" kendoRadioButton [(ngModel)]="mode"
+            (change)="setSelectableSettings()" />
+        <label for="single">Single</label>
+        <input type="radio" id="multiple" value="multiple" kendoRadioButton [(ngModel)]="mode"
+            (change)="setSelectableSettings()" />
+        <label for="multiple">Multiple</label>
+    </div>
+<kendo-grid [selectable]="{enabled: true,  checkboxOnly: true}" [data]="gridData"
+    (selectionChange)="onSelectionChange($event)">
+    <kendo-grid-column field="ID" title="ID"></kendo-grid-column>
+    <kendo-grid-column field="Name" title="Name"></kendo-grid-column>
+    <kendo-grid-column field="Email" title="Email"></kendo-grid-column>
+    <kendo-grid-checkbox-column field="Select" title="Select"></kendo-grid-checkbox-column>
+</kendo-grid>
+
+<div class="display">
+    <div *ngIf="selectedRowData">
+        <p>Id: {{selectedRowData.ID}}</p>
+        <p>Name: {{selectedRowData.Name}}</p>
+        <p>Email: {{selectedRowData.Email}}</p>
+    </div>
+</div>
+
+<kendo-button [look]="'outline'">Delete</kendo-button>
+<kendo-button [look]="'outline'">Copy data</kendo-button>

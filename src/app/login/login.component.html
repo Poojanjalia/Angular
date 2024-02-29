@@ -1,0 +1,40 @@
+<h3>Login Page</h3>
+<form class="k-form" [formGroup]="userForm">
+<kendo-formfield orientation="horizontal">
+    <kendo-label [for]="userName" text="userName" ></kendo-label>
+    <kendo-textbox class="custom-border" formControlName="userName" #userName required></kendo-textbox>
+    <kendo-formhint>Your username</kendo-formhint>
+    <kendo-formerror>Error: Username is required</kendo-formerror>
+</kendo-formfield>
+<br>
+<kendo-formfield orientation="horizontal">
+    <kendo-label [for]="email" text="Email"></kendo-label>
+    <kendo-textbox class="custom-border" formControlName="email" #email required></kendo-textbox>
+    <kendo-formhint>Your email</kendo-formhint>
+<kendo-formerror>Error: Not valid email format</kendo-formerror>
+</kendo-formfield>
+<br>
+<kendo-formfield>
+    <kendo-label [for]="password" text="Password"></kendo-label>
+    <kendo-textbox class="custom-border" formControlName="password" #password required></kendo-textbox>
+    <kendo-formhint>Your password</kendo-formhint>
+    <kendo-formerror>Error: password is required</kendo-formerror>
+</kendo-formfield>
+<br>
+<kendo-formfield>
+    <kendo-label [for]="birthDate" [optional]="true" text="Bith date"></kendo-label>
+    <kendo-datepicker class="custom-border" #birthDate formControlName="birthDate"></kendo-datepicker>
+    <kendo-formhint>Your birth date</kendo-formhint>
+</kendo-formfield>
+<br>
+<kendo-formfield>
+    <input class="custom-border" #acceptNews type="checkbox" kendoCheckBox formControlName="acceptNews"/>
+    <kendo-label [for]="acceptNews" class="k-checkbox-label" text="I want to receive notifications"></kendo-label>
+</kendo-formfield>
+<br>
+<div class="k-form-buttons">
+    <button kendoButton themeColor="primary" (click)="submitForm()" (click)="show()">
+        Submit
+    </button>
+</div>
+</form>

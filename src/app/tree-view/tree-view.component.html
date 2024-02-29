@@ -1,0 +1,28 @@
+<h1>TreeView</h1>
+<div class="example-config">Checked keys:{{ checkedKeys.join(",")}}</div>
+<kendo-treeview [nodes]="data"
+ textField="text"
+ kendoTreeViewCheckable
+ [(checkedKeys)]="checkedKeys"
+ checkBy="text"
+ kendoTreeViewHierarchyBinding 
+ childrenField="items">
+</kendo-treeview>
+
+
+<h3>Local Heterogeneous Data</h3>
+<div class="example-config">Checked keys: {{ checkedKey.join(",") }}</div>
+<kendo-treeview 
+[nodes]="company"
+[filterable]="true"
+[textField]="['categoryName','subCategoryName']"
+kendoTreeViewExpandable
+kendoTreeViewHierarchyBinding
+childrenField="subCategories"
+[kendoTreeViewSelectable]="selection"
+selectBy="subCategoryName"
+kendoTreeViewCheckable
+[(checkedKeys)]="checkedKey"
+kendoTreeViewLoadMore
+[pageSize]="3">    
+</kendo-treeview> 

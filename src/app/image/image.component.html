@@ -1,0 +1,7 @@
+<h1>Hide path</h1>
+<div>
+    <input type="text" [(ngModel)]="imagePathh" placeholder="Enter Image Path">
+    <button (click)="encodeImage()">Encrypt</button>
+    <img *ngIf="imagePathh" [src]="imagePathh" alt="Image">
+</div>
+<br>
