@@ -7,7 +7,7 @@ import { ImageComponent } from './image/image.component';
 import { LoginComponent } from './login/login.component';
 import { TableComponent } from './table/table.component';
 import { TreeViewComponent } from './tree-view/tree-view.component';
-
+import { CRUDComponent } from './crud/crud.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/app-component', pathMatch: 'full' },
@@ -16,8 +16,8 @@ const routes: Routes = [
   {path: 'hide', component: ImageComponent},
   {path: 'login', component: LoginComponent},
   {path: 'table', component: TableComponent},
-  {path: 'treeView', component: TreeViewComponent}
-  
+  {path: 'treeView', component: TreeViewComponent},
+  {path: 'crud', component: CRUDComponent}
 ]
 
 @NgModule({

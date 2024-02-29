@@ -1,0 +1,21 @@
+<h2>CRUD Operations</h2>
+<kendo-grid
+[kendoGridReactiveEditing]="createFormGroup"
+[kendoGridBinding]="data"
+[sortable]="true"
+>
+<ng-template kendoGridToolbarTemplate>
+    <button kendoGridAddCommand>Add</button>
+</ng-template>
+<kendo-grid-column field="ID" title="ID"></kendo-grid-column>
+<kendo-grid-column field="Name" title=" Name"></kendo-grid-column>
+<kendo-grid-column field="LastName" title="LastName"></kendo-grid-column>
+<kendo-grid-command-column title="command">
+    <ng-template kendoGridCellTemplate let-isNew="isNew">
+        <button kendoGridEditCommand [primary]="true">Edit</button>
+        <button kendoGridRemoveCommand>Delete</button>
+        <button kendoGridSaveCommand [disabled]="formGroup.invalid">{{isNew ? 'Add' : 'Save' }}</button>
+        <button kendoGridCancelCommand>{{isNew ? 'Cancel' : 'Cancel'}}</button>
+    </ng-template>
+</kendo-grid-command-column>
+</kendo-grid>

@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TreeViewModule } from '@progress/kendo-angular-treeview';
 import { TreeViewComponent } from './tree-view/tree-view.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CRUDComponent } from './crud/crud.component';
 
 @NgModule({
     declarations: [
@@ -29,6 +30,7 @@ import { AppRoutingModule } from './app-routing.module';
         TableComponent,
         DLImgComponent,
         ImageComponent,
+        CRUDComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -49,7 +51,8 @@ import { AppRoutingModule } from './app-routing.module';
         TreeViewModule,
         TreeViewComponent,
       NotificationModule,
-      AppRoutingModule
+        AppRoutingModule,
+      
     ]
 })
   

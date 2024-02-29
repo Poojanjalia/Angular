@@ -7,6 +7,7 @@ import { SelectableMode, SelectableSettings } from '@progress/kendo-angular-grid
   styleUrls: ['./table.component.css']
 })
 export class TableComponent {
+
   public selectedItems: any[] = [];
   public selectedColumn : string []= ['ID', 'Name', 'Email', 'Number'];
   public gridData: any[] = [
@@ -66,4 +67,5 @@ export class TableComponent {
   
     this.selectedRowData = [...this.selectedRowData, ...selectedItems]; //spread operator
   }
+  
 }
