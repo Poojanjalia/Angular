@@ -1,15 +1,5 @@
 <h1>Grid</h1>
 
-    <legend>Selection setting</legend>
-    <div class="k-form-field">
-        <span>Mode</span>
-        <input type="radio" id="single" value="single" kendoRadioButton [(ngModel)]="mode"
-            (change)="setSelectableSettings()" />
-        <label for="single">Single</label>
-        <input type="radio" id="multiple" value="multiple" kendoRadioButton [(ngModel)]="mode"
-            (change)="setSelectableSettings()" />
-        <label for="multiple">Multiple</label>
-    </div>
 <kendo-grid [selectable]="{enabled: true,  checkboxOnly: true}" [data]="gridData"
     (selectionChange)="onSelectionChange($event)">
     <kendo-grid-column field="ID" title="ID"></kendo-grid-column>
